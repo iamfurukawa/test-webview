@@ -6,6 +6,7 @@ import './index.css'
 declare global {
   interface Window {
     messageHandler?: any;
+    backToFlutter?: any;
   }
 }
 

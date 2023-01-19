@@ -7,12 +7,20 @@ function App() {
 
   const sendEvent = () => {
     setCount((count) => count + 1)
-    
+
     if (window.messageHandler && window.messageHandler.postMessage)
       window.messageHandler.postMessage('Hello from JS' + count);
     else
       console.log('not executed.')
+  }
 
+  const backToFlutter = () => {
+    setCount((count) => count + 1)
+
+    if (window.backToFlutter && window.backToFlutter.postMessage)
+      window.backToFlutter.postMessage('Hello from JS' + count);
+    else
+      console.log('not executed.')
   }
 
   return (
@@ -29,6 +37,10 @@ function App() {
       <div className="card">
         <button onClick={() => sendEvent()}>
           count is {count}
+        </button>
+
+        <button onClick={() => backToFlutter()}>
+          Close
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
