@@ -7,7 +7,7 @@ function App() {
 
   const sendEvent = () => {
     try {
-      window.messageHandler.postMessage(count);
+      window.messageHandler.postMessage('Hello from JS');
     } catch (error) {
       console.error(error)
     } finally {
