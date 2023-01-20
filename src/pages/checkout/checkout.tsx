@@ -35,7 +35,7 @@ const CheckoutPage = () => {
                             </div>
                         </div>
                         <center>
-                            <button onClick={() => navigate('/confirm')}>Efetuar Pagamento</button>
+                            <button onClick={() => navigate('/confirm', { state })}>Efetuar Pagamento</button>
                         </center>
                     </div>
             }
