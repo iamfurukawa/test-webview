@@ -27,7 +27,7 @@ const CheckoutPage = () => {
                             <div className={styles.content}>
                                 <div>TOTAL</div>
                                 {
-                                    cartItems.map(item => item.quantity * item.price)
+                                    cartItems.map(item => item.quantity! * item.price)
                                         .reduce(function (accumulator: number, value: number) {
                                             return accumulator + value
                                         }, 0)

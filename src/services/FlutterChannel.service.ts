@@ -1,7 +1,7 @@
 class FlutterChannel {
     sendMessage = (message: any) => {
         if (window.messageHandler && window.messageHandler.postMessage)
-            window.messageHandler.postMessage('Hello from JS' + count);
+            window.messageHandler.postMessage(message);
         else
             console.log('not executed.')
     }
