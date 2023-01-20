@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,7 +17,7 @@ function App() {
     setCount((count) => count + 1)
 
     if (window.backToFlutter && window.backToFlutter.postMessage)
-      window.backToFlutter.postMessage('Hello from JS' + count);
+      window.backToFlutter.postMessage();
     else
       console.log('not executed.')
   }
