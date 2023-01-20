@@ -16,7 +16,6 @@ const ConfirmationPage = () => {
     useEffect(() => {
         setTimeout(() => {
             FlutterChannelService.sendMessage(JSON.stringify(cartItems));
-            FlutterChannelService.backToFlutter();
         }, 3000);
     }, [])
 

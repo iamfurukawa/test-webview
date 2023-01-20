@@ -1,16 +1,17 @@
 class FlutterChannel {
     sendMessage = (message: any) => {
         console.log('send: ', message)
-        if (window.messageHandler && window.messageHandler.postMessage)
+        if (window.messageHandler && window.messageHandler.postMessage) {
             window.messageHandler.postMessage(message);
-        else
+            this.backToFlutter()
+        } else
             console.log('not executed.')
     }
 
     backToFlutter = () => {
         console.log('back to app')
         if (window.backToFlutter && window.backToFlutter.postMessage)
-            window.backToFlutter.postMessage();
+            window.backToFlutter.postMessage('back');
         else
             console.log('not executed.')
     }
